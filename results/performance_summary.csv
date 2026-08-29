@@ -1,0 +1,5 @@
+strategy,start,end,cumulative_return,annual_return,annual_volatility,sharpe,max_drawdown,daily_turnover
+factor_baseline,2022-04-01,2026-04-03,0.1832,0.0428,0.1857,0.23,-0.3202,0.1505
+mamba_long_short,2022-04-01,2026-04-03,0.0935,0.0225,0.1584,0.14,-0.2842,0.1188
+equal_weight_baseline,2022-04-01,2026-04-03,-0.1538,-0.0408,0.6335,-0.06,-0.6645,0.0167
+mamba_equal_weight,2022-04-01,2026-04-03,0.0217,0.0054,0.5323,0.01,-0.5744,0.0163

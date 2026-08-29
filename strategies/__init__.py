@@ -1,1 +1,2 @@
-# Strategies package
+"""Portfolio construction, execution simulation, and backtesting."""
+

@@ -1,1 +1,2 @@
-# Visualization package
+"""Research reporting and plotting utilities."""
+

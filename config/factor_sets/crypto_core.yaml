@@ -1,0 +1,72 @@
+library_name: crypto_core
+description: Native minute-bar factors currently enabled in the baseline and Mamba pipeline.
+selection:
+  ic_lookback: 120
+  min_ic_observations: 40
+  top_n: 2
+  candidate_pool_size: 4
+  strong_bucket_size: 2
+  max_weight: 0.18
+  max_active_factors: 6
+  max_factors_per_group: 2
+  require_positive_icir: true
+  hard_disable_non_positive_ic: true
+  prior_strength: 0.35
+  min_factor_score: 0.0
+  min_names_per_side: 2
+  score_power: 1.25
+  max_crowding_hhi: 0.18
+native_factors:
+  - name: f_price_trend
+    source: native
+    enabled: true
+    direction: 1.0
+    group_tag: trend
+  - name: f_intra_mom
+    source: native
+    enabled: true
+    direction: 1.0
+    group_tag: trend
+  - name: f_return_acceleration
+    source: native
+    enabled: true
+    direction: 1.0
+    group_tag: trend
+  - name: f_smart_money
+    source: native
+    enabled: true
+    direction: 1.0
+    group_tag: flow
+  - name: f_large_order_imbalance
+    source: native
+    enabled: true
+    direction: 1.0
+    group_tag: flow
+  - name: f_volume_synergy
+    source: native
+    enabled: true
+    direction: 1.0
+    group_tag: flow
+  - name: f_pv_corr
+    source: native
+    enabled: true
+    direction: 1.0
+    group_tag: flow
+  - name: f_vol_roc_skew
+    source: native
+    enabled: false
+    direction: -1.0
+    group_tag: volatility
+  - name: f_daily_vol
+    source: native
+    enabled: false
+    direction: -1.0
+    group_tag: volatility
+  - name: f_morning_ret_reversal
+    source: native
+    enabled: false
+    direction: -1.0
+    group_tag: session
+imported_factors:
+  config_path: crypto_imported_selected.yaml
+  integrate_when_implemented: true

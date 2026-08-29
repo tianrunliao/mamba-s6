@@ -1,0 +1,19 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+.DS_Store
+
+# Raw Binance minute bars and generated research artifacts are reproducible,
+# large, and intentionally excluded from version control.
+data_integrated/
+results_integrated/
+*.pt
+*.parquet
+*.log
+download_progress.json
+
